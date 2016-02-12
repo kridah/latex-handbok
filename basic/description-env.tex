@@ -1,0 +1,50 @@
+\subsection{Beskrivelser (\texttt{description}-miljøet)}
+\label{env:description}
+\begin{description}
+    \item[Pakke] Globalt
+\end{description}
+
+\subsubsection*{Bruk}
+Sett inn en enkel liste med tre elementer:
+\vspace{0.75em}
+\begin{lstlisting}[language=Tex]
+\begin{description}
+    \item[Foo] bar
+    \item[Baz] qux
+\end{description}
+\end{lstlisting}
+
+\noindent Resultat:
+\begin{description}
+    \item[Foo] bar
+    \item[Baz] qux
+\end{description}
+\vspace{0.75em}
+
+
+\horizontalrule
+
+
+\noindent Sett inn en beskrivelse med en liste:
+\vspace{0.75em}
+\begin{lstlisting}[language=Tex]
+\begin{description}
+    \item[Foo]
+    \begin{enumerate}
+        \item Baz
+        \item Qux
+    \end{enumerate}
+    \item[Bar] Baz
+\end{description}
+\end{lstlisting}
+\vspace{0.75em}
+
+\noindent Resultat:
+\begin{description}
+    \item[Foo]
+    \begin{enumerate}
+        \item Baz
+        \item Qux
+    \end{enumerate}
+    \item[Bar] Baz
+\end{description}

@@ -1,8 +1,7 @@
 \subsection{Nummererte lister (\texttt{enumerate}-miljøet)}
 \label{env:enumerate}
 \begin{description}
-    \item[Pakke] Globalt - Pakken \texttt{enumerate} kan benyttes for å endre nummereringsmetoden.
-    \item[Mer info] \texttt{texdoc enumerate} - For info om bruk av den valgfrie pakken og alternativ nummerering.
+    \item[Pakke] Globalt
 \end{description}
 
 Nummererte lister blir lagd ved å benytte seg av \texttt{enumerate}-miljøet.
@@ -37,7 +36,27 @@ Sett inn en enkel liste med tre elementer:
 \horizontalrule
 
 
+Sett inn en liste hvor ett av elementene har en etikett istedet for indeks.
 \vspace{0.75em}
+\begin{lstlisting}[language=Tex]
+\begin{enumerate}
+    \item Foo
+    \item[Qux] Bar
+    \item Baz
+\end{enumerate}
+\end{lstlisting}
+\noindent Resultat:
+\begin{enumerate}
+    \item Foo
+    \item[Qux] Bar
+    \item Baz
+\end{enumerate}
+\vspace{0.75em}
+
+
+\horizontalrule
+
+
 \noindent Sett inn en liste med underelementer:
 \vspace{0.75em}
 \begin{lstlisting}[language=Tex]
