@@ -1,0 +1,31 @@
+\subsection{Inkludere PDFer}
+\label{pkg:pdfpages}
+\begin{description}
+    \item[Pakke] \texttt{pdfpages}
+    \item[Eksempel] \texttt{\textbackslash includepdf[pages=\{1-4\}]\{example.pdf\}}
+    \item[Mer info] \texttt{texdoc pdfpages}
+\end{description}
+
+Å inkludere PDFer gjøres ved å benytte seg av \texttt{\textbackslash includepdf}-kommandoen.
+Kommandoen har to argumenter som vi må forholde oss til: Et option \texttt{pages} som beskriver sidene som skal puttes inn i dokumentet, og filen som skal inkluderes.
+
+\texttt{pages}-valget er en komma-separert liste med sider som skal inkluderes i dokumentet, i den rekkefølgen de oppstår i listen.
+Man kan angi en rekke med sider ved å bruke \texttt{startside-sluttside} i listen, eller alle sider i PDFen ved å sette \texttt{pages} til \texttt{-}, altså en enkelt bindestrek.
+Man kan også bruke \texttt{\{\}} for å sette inn en tom side.
+
+\textbf{Merk!} \texttt{pages}-valget defaulter til en verdi av \texttt{1}, hvilket bare vil inkludere den første siden av PDFen.
+
+\subsubsection*{Bruk}
+Sett inn en hel PDF på det gjeldende stedet i dokumentet:
+\vspace{0.75em}
+\begin{lstlisting}
+\includepdf[pages=-]{example.pdf}
+\end{lstlisting}
+\vspace{1.5em}
+
+Sett inn side 1-3, side 5, en blank side og side 6 til siste side av PDFen:
+\vspace{0.75em}
+\begin{lstlisting}
+\includepdf[pages={1-3,5,{},6-}]{example.pdf}
+\end{lstlisting}
+\vspace{1.5em}

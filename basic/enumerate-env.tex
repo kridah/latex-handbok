@@ -1,0 +1,63 @@
+\subsection{Nummererte lister (\texttt{enumerate}-miljøet)}
+\label{env:enumerate}
+\begin{description}
+    \item[Pakke] Globalt - Pakken \texttt{enumerate} kan benyttes for å endre nummereringsmetoden.
+    \item[Mer info] \texttt{texdoc enumerate} - For info om bruk av den valgfrie pakken og alternativ nummerering.
+\end{description}
+
+Nummererte lister blir lagd ved å benytte seg av \texttt{enumerate}-miljøet.
+Hvert \texttt{\textbackslash item} i dette miljøet vil dukke opp som ett punkt i en nummerert liste.
+\texttt{enumerate}-miljøet kan enkelt kombineres med \texttt{itemize}-miljøet og \texttt{enumerate}-miljøet for å lage lister med flere nivåer.
+
+\subsubsection*{Se også}
+\begin{description}
+    \item[\ref{pkg:enumerate}~\nameref{pkg:enumerate}] for å finne ut hvordan du kan endre nummereringsstilen.
+    \item[\ref{pkg:enumitem}~\nameref{pkg:enumitem}] for å finne ut hvordan du fleksibelt kan tilpasse nummererte lister.
+\end{description}
+
+\subsubsection*{Bruk}
+Sett inn en enkel liste med tre elementer:
+\vspace{0.75em}
+\begin{lstlisting}[language=Tex]
+\begin{enumerate}
+    \item Foo
+    \item Bar
+    \item Baz
+\end{enumerate}
+\end{lstlisting}
+\noindent Resultat:
+\begin{enumerate}
+    \item Foo
+    \item Bar
+    \item Baz
+\end{enumerate}
+\vspace{0.75em}
+
+
+\horizontalrule
+
+
+\vspace{0.75em}
+\noindent Sett inn en liste med underelementer:
+\vspace{0.75em}
+\begin{lstlisting}[language=Tex]
+\begin{enumerate}
+    \item Foo
+    \begin{enumerate}
+        \item Bar
+        \item Bat
+    \end{enumerate}
+    \item Baz
+\end{enumerate}
+\end{lstlisting}
+\vspace{0.75em}
+
+\noindent Resultat:
+\begin{enumerate}
+    \item Foo
+    \begin{enumerate}
+        \item Bar
+        \item Bat
+    \end{enumerate}
+    \item Baz
+\end{enumerate}

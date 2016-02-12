@@ -1,0 +1,62 @@
+\subsection{Alternativ nummerering av lister med \texttt{enumerate}-pakken}
+\label{pkg:enumerate}
+\begin{description}
+    \item[Pakke] \texttt{enumerate}
+    \item[Mer info] \texttt{texdoc enumerate}
+    \item[Er i konflikt med] \texttt{enumitem}
+\end{description}
+
+Om det ønskes en annen nummereringsstil enn det malen din tilbyr kan du bruke pakken \texttt{enumerate}.
+Denne pakken vil utvide \texttt{enumerate}-miljøet med ett valgfritt argument som beskriver etiketten som skal bli brukt.
+Dette argumentet er en streng hvor plassholderne \texttt{I, i, A, a} og \texttt{1} vil erstattes med indeksen for det gjeldende
+elementet.
+
+\textbf{Merk!} Om det ønskes å bruke disse tegnene i etiketten uten at de blir erstattet må de plasseres innenfor \{\}.
+
+\subsubsection*{Bruk}
+Sett inn en enkel liste med tre elementer:
+\vspace{0.75em}
+\begin{lstlisting}[language=Tex]
+\begin{enumerate}[i]
+    \item Foo
+    \item Bar
+    \item Baz
+\end{enumerate}
+\end{lstlisting}
+
+\noindent Resultat:
+\begin{enumerate}[i]
+    \item Foo
+    \item Bar
+    \item Baz
+\end{enumerate}
+\vspace{0.75em}
+
+
+\horizontalrule
+
+
+\vspace{0.75em}
+\noindent Sett inn en liste med underelementer, hvor topplisten blir nummerert med romertall og underlisten med \texttt{alpha =}:
+\vspace{0.75em}
+\begin{lstlisting}[language=Tex]
+\begin{enumerate}[I.]
+    \item Foo
+    \begin{enumerate}[a =]
+        \item Bar
+        \item Bat
+    \end{enumerate}
+    \item Baz
+\end{enumerate}
+\end{lstlisting}
+\vspace{0.75em}
+
+\noindent Resultat:
+\begin{enumerate}[I.]
+    \item Foo
+    \begin{enumerate}[a =]
+        \item Bar
+        \item Bat
+    \end{enumerate}
+    \item Baz
+\end{enumerate}
